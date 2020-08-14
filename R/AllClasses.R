@@ -38,20 +38,6 @@
 )
 
 
-#' @export .ProData
-#' @exportClass ProData
-.ProData <- setClass("ProData",
-                      slots = c(
-                        id = "character",
-                        name = "character",
-                        description = "character",
-                        pro = "Pro",
-                        characteristic = "Characteristic",
-                        data = "data.frame"
-                      )
-)
-
-
 #' @export .Analysis
 #' @exportClass Analysis
 .Analysis <- setClass("Analysis",
@@ -59,7 +45,7 @@
                         id = "character",
                         name = "character",
                         description = "character",
-                        data = "ProData",
+                        data = "data.frame",
                         pro = "Pro",
                         characteristic = "Characteristic"
                       )

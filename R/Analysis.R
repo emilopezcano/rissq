@@ -14,7 +14,7 @@ setMethod("initialize",
               description = NA_character_
             }
 
-            pro = .Pro(id = id, name = name, data = data)
+            #pro = .Pro(id = id, name = name)
 
-            callNextMethod(.Object, ..., id = id, name = name, description = description, pro = pro)
+            callNextMethod(.Object, ..., id = id, name = name, description = description, pro = pro, data = data)
           })
