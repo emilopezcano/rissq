@@ -4,7 +4,8 @@ Title: R Infrasctructure for Statistical Standards on Quality
 Version: 0.1.0
 Authors@R: c(person("Emilio L.", "Cano", email = "emilio.lcano@uclm.es", 
                   role = c("aut", "cre")),
-             person("Manuel", "Alfaro", role = c("ctb")))
+             person("Manuel", "Alfaro", email = "manuel.alfaro@alu.uclm.es",
+                  role = c("ctb")))
 Maintainer: Emilio L. Cano <emilio.lcano@uclm.es>
 Description: Implementation of statistical methods for quality control and 
     improvement according to relevant standards in Industry and Business.
@@ -13,4 +14,4 @@ License: GPL (>= 2)
 Encoding: UTF-8
 Imports: methods
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.1

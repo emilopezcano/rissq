@@ -3,7 +3,6 @@
 \docType{package}
 \name{RISSQ}
 \alias{RISSQ}
-\alias{RISSQ-package}
 \title{R Infraestucture for Statistical Standards on Quality}
 \description{
 R Infraestucture for Statistical Standards on Quality

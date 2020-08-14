@@ -5,9 +5,9 @@
 #' @export
 setMethod("initialize",
           signature = signature(.Object = "Process"),
-          function(.Object, ..., process, id, name, description = character(0), characteristics = list(0), data = data.frame(0)) {
+          function(.Object, ..., process, id, name, description = character(0), characteristics = list(0)) {
 
-            callNextMethod(.Object, ...,process = process, id = id, name = name, description = description, characteristics = characteristics, data = data)
+            callNextMethod(.Object, ...,process = process, id = id, name = name, description = description, characteristics = characteristics)
           })
 
 

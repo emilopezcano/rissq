@@ -5,9 +5,9 @@
 #' @export
 setMethod("initialize",
           signature = signature(.Object = "Product"),
-          function(.Object, ..., product, id, name, description = character(0), characteristics = list(0), data = data.frame(0)) {
+          function(.Object, ..., product, id, name, description = character(0), characteristics = list(0)) {
 
-            callNextMethod(.Object, ...,product = product, id = id, name = name, description = description, characteristics = characteristics, data = data)
+            callNextMethod(.Object, ...,product = product, id = id, name = name, description = description, characteristics = characteristics)
           })
 
 
