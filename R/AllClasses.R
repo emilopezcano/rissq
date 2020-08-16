@@ -16,7 +16,8 @@
                    id = "character",
                    name = "character",
                    description = "character",
-                   characteristics = "list"
+                   characteristics = "list",
+                   datasets = "list"
                  ))
 
 #' @export .Process
