@@ -10,7 +10,6 @@ setMethod("initialize",
             callNextMethod(.Object, ...,process = process, id = id, name = name, description = description, characteristics = characteristics, datasets = datasets)
           })
 
-
 setMethod("show", "Process", function(object) {
             cat("Process, ", object@name, "\n", "ID, ", object@id ,sep = "")
             cat(" ", length(object@characteristics), " characteristics recorded.\n", sep = "")
