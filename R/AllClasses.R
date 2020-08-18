@@ -9,7 +9,8 @@
                               T = "numeric",
                               U = "numeric",
                               L = "numeric",
-                              pnc = "numeric"
+                              pnc = "numeric",
+                              digits = "numeric"
                             )
 )
 

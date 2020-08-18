@@ -5,13 +5,13 @@
 #' @export
 setMethod("initialize",
           signature = signature(.Object = "Characteristic"),
-          function(.Object, ..., id, name, description = character(0), kvalue = character(0), T, U, L, pnc) {
+          function(.Object, ..., id, name, description = character(0), kvalue = character(0), T, U, L, pnc, digits) {
             if(missing(id) || missing(name)){
-              stop ("[Characteristic: validation] ID and name must be specified")
+              stop("[Characteristic: validation] ID and name must be specified")
             }
 
             if(missing(T)) {
-              stop ("[Characteristic: validation] Target value must be specified")
+              stop("[Characteristic: validation] Target value must be specified")
             }
 
             if(missing(U)) {
@@ -26,8 +26,13 @@ setMethod("initialize",
               pnc = NA_real_
             }
 
+            if(missing(digits)) {
+              digits = 4
+              message("[Characteristic: validation] Number of decimal places set to 4")
+            }
 
-            callNextMethod(.Object, ..., id = id, name = name, description = description, kvalue=kvalue, T = T, U = U, L = L, pnc = pnc)
+
+            callNextMethod(.Object, ..., id = id, name = name, description = description, kvalue=kvalue, T = T, U = U, L = L, pnc = pnc, digits = digits)
           })
 
 setMethod("show", "Characteristic", function(object) {
@@ -39,6 +44,7 @@ setMethod("show", "Characteristic", function(object) {
       "\n", "    Upper limit, ", object@U,
       "\n", "    Lower limit, ", object@L,
       "\n", "    Non-compliant percentage, ", object@pnc,
+      "\n", "    umber of decimal places, ", object@digits,
       sep = "")
   invisible(NULL)
 })

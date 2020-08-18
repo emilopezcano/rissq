@@ -14,7 +14,8 @@
   T,
   U,
   L,
-  pnc
+  pnc,
+  digits
 )
 }
 \description{
