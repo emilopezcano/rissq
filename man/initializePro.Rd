@@ -10,7 +10,8 @@
   id,
   name,
   description = character(0),
-  characteristics = list(0)
+  characteristics = list(0),
+  datasets = list(0)
 )
 }
 \description{
