@@ -5,7 +5,11 @@
                               id = "character",
                               name = "character",
                               description = "character",
-                              kvalue = "character"
+                              kvalue = "character",
+                              T = "numeric",
+                              U = "numeric",
+                              L = "numeric",
+                              pnc = "numeric"
                             )
 )
 
@@ -46,8 +50,18 @@
                         id = "character",
                         name = "character",
                         description = "character",
-                        data = "data.frame",
+                        data = "ProData",
                         pro = "Pro",
                         characteristic = "Characteristic"
+                      )
+)
+
+#' @export .ProData
+#' @exportClass ProData
+.ProData <- setClass("ProData",
+                      slots = c(
+                        pro = "Pro",
+                        characteristic = "Characteristic",
+                        data = "data.frame"
                       )
 )
