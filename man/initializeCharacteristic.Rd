@@ -10,7 +10,11 @@
   id,
   name,
   description = character(0),
-  kvalue = character(0)
+  kvalue = character(0),
+  T,
+  U,
+  L,
+  pnc
 )
 }
 \description{

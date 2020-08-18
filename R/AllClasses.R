@@ -42,6 +42,15 @@
                      contains="Pro"
 )
 
+#' @export .ProData
+#' @exportClass ProData
+.ProData <- setClass("ProData",
+                     slots = c(
+                       pro = "Pro",
+                       characteristic = "Characteristic",
+                       data = "data.frame"
+                     )
+)
 
 #' @export .Analysis
 #' @exportClass Analysis
@@ -53,15 +62,5 @@
                         data = "ProData",
                         pro = "Pro",
                         characteristic = "Characteristic"
-                      )
-)
-
-#' @export .ProData
-#' @exportClass ProData
-.ProData <- setClass("ProData",
-                      slots = c(
-                        pro = "Pro",
-                        characteristic = "Characteristic",
-                        data = "data.frame"
                       )
 )

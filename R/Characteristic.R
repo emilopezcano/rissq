@@ -5,15 +5,40 @@
 #' @export
 setMethod("initialize",
           signature = signature(.Object = "Characteristic"),
-          function(.Object, ..., id, name, description = character(0), kvalue = character(0)) {
+          function(.Object, ..., id, name, description = character(0), kvalue = character(0), T, U, L, pnc) {
             if(missing(id) || missing(name)){
               stop ("[Characteristic: validation] ID and name must be specified")
             }
 
-            callNextMethod(.Object, ..., id = id, name = name, description = description, kvalue=kvalue)
+            if(missing(T)) {
+              stop ("[Characteristic: validation] Target value must be specified")
+            }
+
+            if(missing(U)) {
+              U = NA_real_
+            }
+
+            if(missing(L)) {
+              L = NA_real_
+            }
+
+            if(missing(pnc)) {
+              pnc = NA_real_
+            }
+
+
+            callNextMethod(.Object, ..., id = id, name = name, description = description, kvalue=kvalue, T = T, U = U, L = L, pnc = pnc)
           })
 
 setMethod("show", "Characteristic", function(object) {
-  cat("Characteristic, ", object@name, "\n", "ID, ", object@id ,sep = "")
+  cat("Characteristic, ", object@name,
+      "\n", "ID, ", object@id,
+      "\n", "Description, ", object@description,
+      "\n", "KValue, ", object@kvalue,
+      "\n", "    Target value, ", object@T,
+      "\n", "    Upper limit, ", object@U,
+      "\n", "    Lower limit, ", object@L,
+      "\n", "    Non-compliant percentage, ", object@pnc,
+      sep = "")
   invisible(NULL)
 })
