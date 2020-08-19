@@ -44,7 +44,7 @@ setMethod("show", "Characteristic", function(object) {
       "\n", "    Upper limit, ", object@U,
       "\n", "    Lower limit, ", object@L,
       "\n", "    Non-compliant percentage, ", object@pnc,
-      "\n", "    umber of decimal places, ", object@digits,
+      "\n", "    Number of decimal places, ", object@digits,
       sep = "")
   invisible(NULL)
 })
