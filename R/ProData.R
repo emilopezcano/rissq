@@ -19,16 +19,20 @@ setMethod("initialize",
               stop("[ProData: validation] Characteristic object must be specified")
             }
 
-            callNextMethod(.Object, ..., pro = pro, characteristic = characteristic, data = data)
-
-            headers <- names(.Object@data)
+            headers <- names(data)
 
             part <- headers[1]
             appraiser <- headers[2]
             variable <- headers[3]
 
-            .Object@data[[appraiser]] <- factor(.Object@data[[appraiser]])
-            .Object@data[[part]] <- factor(.Object@data[[part]])
+            data[[appraiser]] <- factor(data[[appraiser]])
+            data[[part]] <- factor(data[[part]])
+
+            fdata <- data
+
+            callNextMethod(.Object, ..., pro = pro, characteristic = characteristic, data = fdata)
+
+
           })
 
 setMethod("show", "ProData", function(object) {
