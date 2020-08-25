@@ -7,7 +7,6 @@
 \S4method{initialize}{Process}(
   .Object,
   ...,
-  process,
   id,
   name,
   description = character(0),

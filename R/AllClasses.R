@@ -29,18 +29,12 @@
 #' @export .Process
 #' @exportClass Process
 .Process <- setClass("Process",
-                     slots = c(
-                       process = "character"
-                     ),
                      contains="Pro"
 )
 
 #' @export .Product
 #' @exportClass Product
 .Product <- setClass("Product",
-                     slots = c(
-                       product = "character"
-                     ),
                      contains="Pro"
 )
 

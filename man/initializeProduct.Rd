@@ -7,7 +7,6 @@
 \S4method{initialize}{Product}(
   .Object,
   ...,
-  product,
   id,
   name,
   description = character(0),

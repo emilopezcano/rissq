@@ -5,9 +5,9 @@
 #' @export
 setMethod("initialize",
           signature = signature(.Object = "Product"),
-          function(.Object, ..., product, id, name, description = character(0), characteristics = list(0), datasets = list(0)) {
+          function(.Object, ..., id, name, description = character(0), characteristics = list(0), datasets = list(0)) {
 
-            callNextMethod(.Object, ...,product = product, id = id, name = name, description = description, characteristics = characteristics, datasets = datasets)
+            callNextMethod(.Object, ..., id = id, name = name, description = description, characteristics = characteristics, datasets = datasets)
           })
 
 setMethod("show", "Product", function(object) {
