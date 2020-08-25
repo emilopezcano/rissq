@@ -8,8 +8,17 @@ setMethod("initialize",
           function(.Object, ..., pro, characteristic, data) {
 
             if(missing(data)) {
-              description = data.frame(0)
+              data = data.frame(0)
             }
+
+            headers <- names(data)
+
+            part <- headers[1]
+            appraiser <- headers[2]
+            variable <- headers[3]
+
+            data[[appraiser]] <- factor(data[[appraiser]])
+            data[[part]] <- factor(data[[part]])
 
             callNextMethod(.Object, ..., pro = pro, characteristic = characteristic, data = data)
           })
