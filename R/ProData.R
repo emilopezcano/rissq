@@ -7,15 +7,15 @@ setMethod("initialize",
           signature = signature(.Object = "ProData"),
           function(.Object, ..., pro, characteristic, data) {
 
-            if(missing(data)) {
+            if(missing(data) || is.na(data)) {
               stop("[ProData: validation] Data must be given")
             }
 
-            if(missing(pro)) {
+            if(missing(pro) || is.na(pro)) {
               stop("[ProData: validation] Proces or pruduct object must be specified")
             }
 
-            if(missing(pro)) {
+            if(missing(characteristic) || is.na(characteristic)) {
               stop("[ProData: validation] Characteristic object must be specified")
             }
 

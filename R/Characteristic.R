@@ -6,31 +6,32 @@
 setMethod("initialize",
           signature = signature(.Object = "Characteristic"),
           function(.Object, ..., id, name, description = character(0), kvalue = character(0), units, T, U, L, pnc, digits) {
-            if(missing(id) || missing(name)){
+
+            if(missing(id) || missing(name) || is.na(id) || is.na(name)){
               stop("[Characteristic: validation] ID and name must be specified")
             }
 
-            if(missing(T)) {
+            if(missing(T) || is.na(T)) {
               stop("[Characteristic: validation] Target value must be specified")
             }
 
-            if(missing(units)) {
+            if(missing(units) || is.na(units)) {
               stop("[Characteristic: validation] Unit of measure must be specified")
             }
 
-            if(missing(U)) {
+            if(missing(U) || is.na(U)) {
               U = NA_real_
             }
 
-            if(missing(L)) {
+            if(missing(L) || is.na(L)) {
               L = NA_real_
             }
 
-            if(missing(pnc)) {
+            if(missing(pnc) || is.na(pnc)) {
               pnc = NA_real_
             }
 
-            if(missing(digits)) {
+            if(missing(digits) || is.na(digits)) {
               digits = 4
               message("[Characteristic: validation] Number of decimal places set to 4")
             }

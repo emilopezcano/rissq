@@ -6,15 +6,14 @@
 setMethod("initialize",
           signature = signature(.Object = "Analysis"),
           function(.Object, ..., id, name, description = NA_character_, data, pro) {
-            if(missing(id) || missing(name)){
+
+            if(missing(id) || missing(name) || is.na(id) || is.na(name)){
               stop ("[Analysis: validation] ID and name must be specified")
             }
 
-            if(missing(description)) {
+            if(missing(description) || is.na(description)) {
               description = NA_character_
             }
-
-            #pro = .Pro(id = id, name = name)
 
             callNextMethod(.Object, ..., id = id, name = name, description = description, pro = pro, data = data)
           })
