@@ -10,7 +10,8 @@
                               U = "numeric",
                               L = "numeric",
                               pnc = "numeric",
-                              digits = "numeric"
+                              digits = "numeric",
+                              units = "character"
                             )
 )
 

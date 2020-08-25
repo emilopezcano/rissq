@@ -5,13 +5,17 @@
 #' @export
 setMethod("initialize",
           signature = signature(.Object = "Characteristic"),
-          function(.Object, ..., id, name, description = character(0), kvalue = character(0), T, U, L, pnc, digits) {
+          function(.Object, ..., id, name, description = character(0), kvalue = character(0), units, T, U, L, pnc, digits) {
             if(missing(id) || missing(name)){
               stop("[Characteristic: validation] ID and name must be specified")
             }
 
             if(missing(T)) {
               stop("[Characteristic: validation] Target value must be specified")
+            }
+
+            if(missing(units)) {
+              stop("[Characteristic: validation] Unit of measure must be specified")
             }
 
             if(missing(U)) {
@@ -45,6 +49,7 @@ setMethod("show", "Characteristic", function(object) {
       "\n", "    Lower limit, ", object@L,
       "\n", "    Non-compliant percentage, ", object@pnc,
       "\n", "    Number of decimal places, ", object@digits,
+      "\n", "Unit of measure, ", object@digits,
       sep = "")
   invisible(NULL)
 })

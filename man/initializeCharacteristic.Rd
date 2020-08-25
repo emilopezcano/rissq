@@ -11,6 +11,7 @@
   name,
   description = character(0),
   kvalue = character(0),
+  units,
   T,
   U,
   L,
