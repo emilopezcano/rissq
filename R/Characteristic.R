@@ -11,12 +11,12 @@ setMethod("initialize",
               stop("[Characteristic: validation] ID and name must be specified")
             }
 
-            if(missing(T) || is.na(T)) {
-              stop("[Characteristic: validation] Target value must be specified")
-            }
-
             if(missing(units) || is.na(units)) {
               stop("[Characteristic: validation] Unit of measure must be specified")
+            }
+
+            if(missing(T) || is.na(T)) {
+              T = NA_real_
             }
 
             if(missing(U) || is.na(U)) {

@@ -1,4 +1,4 @@
-#' constructor for
+#' constructor for Pro
 #'
 #' This is the constructor.
 #' @name initializePro
