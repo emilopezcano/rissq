@@ -2,7 +2,7 @@
 % Please edit documentation in R/Pro.R
 \name{initializePro}
 \alias{initializePro}
-\title{constructor for}
+\title{constructor for Pro}
 \usage{
 \S4method{initialize}{Pro}(
   .Object,
