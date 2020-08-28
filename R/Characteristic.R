@@ -37,7 +37,7 @@ setMethod("initialize",
             }
 
 
-            callNextMethod(.Object, ..., id = id, name = name, description = description, kvalue=kvalue, units, T = T, U = U, L = L, pnc = pnc, digits = digits)
+            callNextMethod(.Object, ..., id = id, name = name, description = description, kvalue=kvalue, units = units, T = T, U = U, L = L, pnc = pnc, digits = digits)
           })
 
 setMethod("show", "Characteristic", function(object) {
